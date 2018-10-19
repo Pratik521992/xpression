@@ -44,12 +44,55 @@ li {
 }
  #showcase  {
    
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    display: flex;
+   align-items: center;
     background-color: white;
     width: 100%;
-    height: 100%;
+    height: 120vh;
 }
+
+.video-wrap {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    padding-bottom: 3em;
+    
+}
+.video-wrap video {
+    min-width: 100%;
+    min-height: 100%;
+   
+
+}
+
+#showcase .wall {
+    height: 100%;
+    widows: 100%;
+   
+    top: 0;
+    left: 0;
+    background-color: #312424;
+    z-index: 4;
+    opacity: 0;
+    
+}
+.header-content {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 10em;
+    z-index: 5;
+    padding: 10em;
+    margin-left: 5em;
+    margin-top: 15em;
+    
+}
+
+
 
 #showcase h1 {
     font-size: 5rem;
@@ -58,20 +101,18 @@ li {
     
 }
 
-#showcase img {
-    width: 80%;
-    margin : 0 auto;
-    display: block;
-    
-}
 
-#showcase .btn {
+.btn {
     overflow: hidden;
     color: #4e5356;
     font-size: auto;
     padding: 1rem 2rem;
     text-decoration: none;
    
+}
+.btn:hover {
+    color: #e0e9ee;
+    background-color: #4e5356
 }
 
 #showcase .showcase-right {
@@ -82,8 +123,13 @@ li {
     display: grid;
     grid-template-columns: 30%  30%;
     grid-gap: 1rem;
+	z-index:10;
+	
+	
     
 }
+
+
 
 .pig-brain {
     
@@ -168,6 +214,8 @@ pig1 li {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
+
+
 .pig2{
     background: url('../img/Tussle_of_words.jpg');
     min-height: 70em;
@@ -179,6 +227,32 @@ pig1 li {
     background-color: white;
     width: 100%;
     height: 100%;
+    
+}
+
+.pigtswords {
+	height: 30em;
+    background-color: #f1f1f1;
+	text-align: center;
+	position: static;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18px;
+    padding: 5em;
+    color: brown;
+
+}
+
+.pigtswords h1{
+    font-size: 5em;
+   
+    
+}
+
+.pigtswords p {
+    font-size: 1.5rem;
+    
+    
     
 }
 .pig3{
@@ -287,19 +361,20 @@ pig1 li {
     
 }
 .section4 {
-    height: 30em;
-    background-color: #f1f1f1;
+    position: relative;
+    height: 25em;
+    background-color: #ebf7cc;
     overflow: hidden;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 18px;
     padding: 10rem;
     color: brown;
-  
-    
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
 }
 
 
-video {
+#gaamevideo {
     top: 50%;
     left: 50%;
     min-width: 100%;
@@ -321,6 +396,9 @@ video {
     -webkit-transition-position: fixed;
     position: fixed;
 }
+
+
+
 
 .pigheader {
     color: #f1f1f1;
@@ -344,6 +422,8 @@ video {
     
     
 }
+
+
 .gamecontents {
 
     display: grid;
@@ -392,3 +472,12 @@ video {
     position: relative;
 }
 
+@media(max-width:960px){
+
+    #showcase, .video-wrap {
+        padding : 3em;
+        
+
+    }
+
+}
